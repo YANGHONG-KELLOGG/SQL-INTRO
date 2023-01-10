@@ -5,6 +5,11 @@
 -- WHERE column1 = expression1
 -- AND column2 = expression2
 
+select players.first_name, players.last_name
+from teams inner join players inner join 
+on 
+
+
 -- Expected result: 47 rows starting with
 --
 -- +------------+-----------+
