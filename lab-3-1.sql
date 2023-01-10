@@ -13,5 +13,8 @@
 -- | 2019 | 30       |
 -- | 2020 | 30       |
 -- +------+----------+
-
+select year, count(*) from teams
+group by year;
+-- can be cound (name) as well
+-- count (*) will give you all rows number
 

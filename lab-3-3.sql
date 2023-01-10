@@ -1,6 +1,25 @@
 -- What were the winningest teams in each season of the 
 -- modern era (from 1960-present), listed by winningest teams first?
 
+--my answer ---> wrong, because not asking each team's best season, but asking each year'e best team
+--select year, name, max(wins) from teams
+--where year >= 1960
+--group by name
+--order by max(wins) desc;
+
+--from class
+select year, name, max(wins) from teams
+where year >=1960
+group by year
+order by max(wins) desc;
+
+--how do i know hwo many rows in the result, totally 61 years!!!
+select count(*) from (select year, name, max(wins) from teams
+where year >=1960
+group by year
+order by max(wins) desc);
+
+
 -- Expected result: 61 rows, starting with
 --
 -- +------+-------------------------------+-----------+
