@@ -6,8 +6,12 @@
 -- AND column2 = expression2
 
 select players.first_name, players.last_name
-from teams inner join players inner join 
-on 
+from teams inner join players inner join stats
+on teams.id = stats.team_id and players.id = stats.player_id
+where teams.name = "Chicago Cubs"
+and teams.year = "2020"
+
+
 
 
 -- Expected result: 47 rows starting with
